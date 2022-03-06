@@ -23,7 +23,7 @@ def get_subdir(path):
         contents_file.write(dir_link)
 
         for f in file_list:
-            link = "- [%s] (%s/blob/%s/%s/%s)\n" %(f[:f.rfind('.')], repo_url, branch_name, current_dir, f)
+            link = "- [%s](%s/blob/%s/%s/%s)\n" %(f[:f.rfind('.')], repo_url, branch_name, current_dir, f)
             contents_file.write(link)
 
     contents_file.close()
