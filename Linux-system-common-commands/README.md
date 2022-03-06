@@ -1,10 +1,9 @@
-<!--
-https://github.com/engild/mans/tree/master/Linux-system-common-commands
--->
-
-### [文件传输](https://github.com/engild/mans/tree/master/Linux-system-common-commands/File-transfer)
-- [rsync](https://github.com/engild/mans/tree/master/Linux-system-common-commands/File-transfer/rsync.md)
-
-### [文本处理](https://github.com/engild/mans/tree/master/Linux-system-common-commands/Text-processing)
-- [cat](https://github.com/engild/mans/tree/master/Linux-system-common-commands/Text-processing/cat.md)
-- [cut](https://github.com/engild/mans/tree/master/Linux-system-common-commands/Text-processing/cut.md)
+### [User-or-group](https://github.com/engild/mans/tree/master/Linux-system-common-commands/User-or-group)
+- [useradd](https://github.com/engild/mans/blob/master/Linux-system-common-commands/User-or-group/useradd.md)
+- [user](https://github.com/engild/mans/blob/master/Linux-system-common-commands/User-or-group/user.md)
+### [File-transfer](https://github.com/engild/mans/tree/master/Linux-system-common-commands/File-transfer)
+- [rsync](https://github.com/engild/mans/blob/master/Linux-system-common-commands/File-transfer/rsync.md)
+### [Text-processing](https://github.com/engild/mans/tree/master/Linux-system-common-commands/Text-processing)
+- [cat](https://github.com/engild/mans/blob/master/Linux-system-common-commands/Text-processing/cat.md)
+- [awk](https://github.com/engild/mans/blob/master/Linux-system-common-commands/Text-processing/awk.md)
+- [cut](https://github.com/engild/mans/blob/master/Linux-system-common-commands/Text-processing/cut.md)
