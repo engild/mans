@@ -1,1 +1,11 @@
-{}
+{
+    'file': '文件相关',
+    'group': '组',
+    'logical_volume': '逻辑卷管理',
+    'network': '网络',
+    'privilege': '权限',
+    'process': '进程',
+    'device-resources': '设备、资源',
+    'text_processing': '文本输入输出处理',
+    'user': '用户',
+}
