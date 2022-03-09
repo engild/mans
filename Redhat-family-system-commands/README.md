@@ -1,6 +1,4 @@
-### [测试](https://github.com/engild/mans/tree/master/Redhat-family-system-commands/testdir)
-- [aa](https://github.com/engild/mans/blob/master/Redhat-family-system-commands/testdir/aa.txt)
-- [tt](https://github.com/engild/mans/blob/master/Redhat-family-system-commands/testdir/tt.tt)
-### [包管理](https://github.com/engild/mans/tree/master/Redhat-family-system-commands/Packages-manage)
-- [rpm](https://github.com/engild/mans/blob/master/Redhat-family-system-commands/Packages-manage/rpm.md)
-- [yum](https://github.com/engild/mans/blob/master/Redhat-family-system-commands/Packages-manage/yum.md)
+
+### [包管理](https://github.com/engild/mans/tree/master/Redhat-family-system-commands/packages_manage)
+- [rpm](https://github.com/engild/mans/blob/master/Redhat-family-system-commands/packages_manage/rpm.md)
+- [yum](https://github.com/engild/mans/blob/master/Redhat-family-system-commands/packages_manage/yum.md)

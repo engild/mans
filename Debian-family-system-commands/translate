@@ -1,4 +1,3 @@
 {
-    'Packages-manage': '包管理',
-    'testdir': '测试'
+    'packages_manage': '包管理',
 }
