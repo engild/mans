@@ -1,6 +1,5 @@
-from importlib.resources import contents
-from logging import exception
 import os
+
 
 server = "https://github.com"
 author = "engild"
@@ -8,43 +7,37 @@ repo = "mans"
 repo_url = "%s/%s/%s" %(server, author, repo)
 branch_name = open('branch-name', 'r').read()
 
+need = [
+    'Debian-family-system-commands', 
+    'Linux-system-common-commands', 
+    'Redhat-family-system-commands',
+    'services',
+    ]
 
-def get_subdir(path):   
-    contents_file = open(path + '/README.md', 'w', encoding='utf-8')
-    info = os.walk(path)
-    translate_file = open(path + '/translate', 'r').read()
+
+def get_all(path):
+    for root, dirs, files in os.walk(path):
+        return {'root': root, 'dirs': sorted(dirs), 'files': sorted(files)}
+
+def gen_contents(dir_name):
+    contents_file = open(dir_name + '/README.md', 'w', encoding='utf-8')
+    translate_file = open(dir_name + '/translate', 'r').read()
     translate = eval(translate_file)
-    for current_dir, subdir, file_list in info:
-        if current_dir == path:
-            continue
-        
-        link_name = current_dir[current_dir.find('/') + 1:]
-        dir_link = "### [%s](%s/tree/%s/%s)\n" %(translate.get(link_name, link_name), repo_url, branch_name, current_dir)
+    dirs = get_all(dir_name)['dirs']
+    dirs = [ dir_name + '/' + i for i in dirs]
+    for dir in dirs:
+        dir_name = dir[dir.find('/') + 1:]
+        link_name = translate.get(dir_name, dir_name)
+        dir_link = "### [%s](%s/tree/%s/%s)\n" %(link_name, repo_url, branch_name, dir)
         contents_file.write(dir_link)
-
-        for f in file_list:
-            link = "- [%s](%s/blob/%s/%s/%s)\n" %(f[:f.rfind('.')], repo_url, branch_name, current_dir, f)
-            contents_file.write(link)
+        for cmd_file in get_all(dir)['files']:
+            cmd_link_name = cmd_file[:cmd_file.rfind('.')]
+            cmd_link = "- [%s](%s/blob/%s/%s/%s)\n" %(cmd_link_name, repo_url, branch_name, dir, cmd_file)
+            contents_file.write(cmd_link)
 
     contents_file.close()
 
 
-dirs = [
-    'Debian-family-system-commands', 
-    'Linux-system-common-commands', 
-    'Redhat-family-system-commands',
-    ]
-
-for i in dirs:
-    get_subdir(i)
-
-
-# <!--
-# https://github.com/engild/mans/tree/master/Linux-system-common-commands
-# -->
-
-
-
-
-
-    
+if __name__ == '__main__':
+    for i in need:
+        gen_contents(i)
