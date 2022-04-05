@@ -1,5 +1,3 @@
-
-### [包管理](https://github.com/engild/mans/tree/master/Redhat-family-system-commands/packages_manage)
-- [dnf](https://github.com/engild/mans/blob/master/Redhat-family-system-commands/packages_manage/dnf.md)
-- [rpm](https://github.com/engild/mans/blob/master/Redhat-family-system-commands/packages_manage/rpm.md)
-- [yum](https://github.com/engild/mans/blob/master/Redhat-family-system-commands/packages_manage/yum.md)
+- [dnf](https://github.com/engild/mans/blob/master/Redhat-family-system-commands/dnf.md)
+- [rpm](https://github.com/engild/mans/blob/master/Redhat-family-system-commands/rpm.md)
+- [yum](https://github.com/engild/mans/blob/master/Redhat-family-system-commands/yum.md)
