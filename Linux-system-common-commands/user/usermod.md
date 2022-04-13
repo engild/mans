@@ -22,7 +22,7 @@ usermod [选项] 用户名
 
 ## 示例
 
-~~~shell
+```shell
 # 锁定test用户
 usermod -L test
 
@@ -40,4 +40,4 @@ usermod -s /bin/false test
 
 # 将test用户的宿主目录修改为new_home,同时会将原宿主目录名修改为new_home。
 usermod -md new_home test
-~~~
+```

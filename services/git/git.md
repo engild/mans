@@ -6,12 +6,12 @@
 
 ### 用法
 
-~~~
+```
 git clone [options] [--] <repo> [<dir>]
 
 <repo>   # 远程仓库，仓库地址有ssh、https两种
 [<dir>]   # 可选参数，可以指定clone到哪个目录
-~~~
+```
 
 | 选项 | 说明   |
 | ---- | ------------|
@@ -24,13 +24,13 @@ git clone [options] [--] <repo> [<dir>]
 
 ### 示例
 
-~~~shell
+```shell
 # 克隆https仓库
 git clone https://github.com/engild/mans.git
 
 # 克隆指定分支
 git clone -b 分支名 仓库地址
-~~~
+```
 
 ---
 ## git switch命令
@@ -38,27 +38,27 @@ git clone -b 分支名 仓库地址
 切换到指定的分支。工作树和索引被更新以匹配分支。所有新的提交都将添加到这个分支的顶端。
 
 ### 用法
-~~~
+```
 git switch [<options>] [--no-guess] <branch>
 git switch [<options>] --detach [<start-point>]
 git switch [<options>] (-c|-C) <new-branch> [<start-point>]
 git switch [<options>] --orphan <new-branch>
-~~~
+```
 
 ### 示例
 
-~~~shell
+```shell
 # 切换到上一个分支
 git switch -
 
 # 切换到master分支
 git switch master
-~~~
+```
 
 ---
 ## git remote命令
 ### 用法
-~~~
+```
 git remote [-v | --verbose]
 git remote add [-t <branch>] [-m <master>] [-f] [--[no-]tags] [--mirror=<fetch|push>] <name> <url>
 git remote rename <old> <new>
@@ -72,10 +72,10 @@ git remote set-url --delete [--push] <name> <url>
 git remote [-v | --verbose] show [-n] <name>...
 git remote prune [-n | --dry-run] <name>...
 git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
-~~~
+```
 ### 示例
 
-~~~shell
+```shell
 # 显示远程仓库信息
 git remote -v
 
@@ -87,7 +87,7 @@ git remote rename upstream upstream1
 
 # 删除远程仓库
 git remote remove upstream1
-~~~
+```
 
 ---
 ## git status
@@ -107,18 +107,18 @@ git remote remove upstream1
 | -v   | 详细模式，除了已经更改的文件名称，还显示暂存以提交的文本更改，如果-v被指定两次，还将显示工作树中还没有被暂存的变化 |
 
 ### 示例
-~~~shell
+```shell
 git status -vv
 
 git status -sb
-~~~
+```
 
 ---
 ## git branch命令
 列出、创建或删除分支
 
 ### 用法
-~~~
+```
 git branch [--color[=<when>] | --no-color] [-r | -a]
         [--list] [-v [--abbrev=<length> | --no-abbrev]]
         [--column[=<options>] | --no-column]
@@ -129,7 +129,7 @@ git branch --unset-upstream [<branchname>]
 git branch (-m | -M) [<oldbranch>] <newbranch>
 git branch (-d | -D) [-r] <branchname>...
 git branch --edit-description [<branchname>]
-~~~
+```
 | 选项 | 说明 |
 | ---- | ------------|
 | -d   | 删除一个分支。分支必须完全合并到其上游分支中，或者如果没有用--track或--set-upstream设置上游，则在HEAD中合并 |
@@ -141,7 +141,7 @@ git branch --edit-description [<branchname>]
 | -M   | 移动/重命名分支，即使新的分支名称已经存在。                  |
 
 ### 示例
-~~~shell
+```shell
 # 列出分支
 git branch
 
@@ -153,7 +153,7 @@ git branch -d temp
 
 # 强制删除temp分支
 git branch -D temp
-~~~
+```
 
 ---
 ## git pull
@@ -167,10 +167,10 @@ git branch -D temp
 \<repository>和\<branch>的默认值是从gitbranch(1)设置的当前分支的“remote”和“merge”配置中读取的。
 
 ### 用法
-~~~
+```
 git pull [<options>] [<repository> [<refspec>...]]
-~~~
+```
 ### 示例
-~~~shell
+```shell
 git pull
-~~~
+```
