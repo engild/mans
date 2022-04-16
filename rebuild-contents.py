@@ -19,7 +19,7 @@ def get_all(path):
     for root, dirs, files in os.walk(path):
         return {'root': root, 'dirs': sorted(dirs), 'files': sorted(files)}
 
-def gen2(path):
+def gen(path):
     contents_file = open(path + '/README.md', 'w', encoding='utf-8')
     translate_file = open(path + '/translate', 'r').read()
     translate = eval(translate_file)
@@ -46,4 +46,4 @@ def gen2(path):
 
 if __name__ == '__main__':
     for i in need:
-        gen2(i)
+        gen(i)
