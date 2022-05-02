@@ -1,8 +1,8 @@
-# sort命令
+## sort命令
 
 对文本排序
 
-## 用法
+### 用法
 ```
 sort [OPTION]... [FILE]...
 

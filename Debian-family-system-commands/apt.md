@@ -1,15 +1,15 @@
-# apt
-## apt使用代理
+# apt命令
+### apt使用代理
 
 编辑/etc/apt/apt.conf.d/10proxy
 ~~~
 Acquire::http::Proxy "http://192.168.68.116:1080";
 ~~~
 
-## 示例
+### 示例
 
 ```shell
-# 更新可用软件包列表 
+# 更新可用软件包列表
 apt update
 
 # 列出所有已安装的包

@@ -1,5 +1,5 @@
-# psql命令
-## 用法
+## psql命令
+### 用法
 ```
 psql [OPTION]... [DBNAME [USERNAME]]
 ```
@@ -18,7 +18,7 @@ psql [OPTION]... [DBNAME [USERNAME]]
 | -w | 永不提示输入密码 |
 | -W | 强制提示输入密码 |
 	
-## 内部命令
+### 内部命令
 psql程序有一些不属于SQL命令的内部命令。它们以反斜线开头，“\”。 欢迎信息中列出了一些这种命令。
 | 命令 | 说明 |
 | --- | --- |
@@ -28,10 +28,10 @@ psql程序有一些不属于SQL命令的内部命令。它们以反斜线开头�
 | \dt | 显示所有表 |
 | \c | 切换数据库。\c dbname [user] |
 
-## SQL
-### 创建数据库
-### 删除数据库
-### 创建表
+### SQL
+#### 创建数据库
+#### 删除数据库
+#### 创建表
 ```sql
 CREATE TABLE weather (
     city            varchar(80),
@@ -41,11 +41,11 @@ CREATE TABLE weather (
     date            date
 );
 ```
-### 删除表
+#### 删除表
 ```sql
 DROP TABLE tablename;
 ```
-### 插入数据
+#### 插入数据
 ```sql
 INSERT INTO weather VALUES ('San Francisco', 46, 50, 0.25, '1994-11-27');
 
@@ -55,7 +55,7 @@ VALUES ('1994-11-29', 'Hayward', 54, 37);
 INSERT INTO weather (city, temp_lo, temp_hi, prcp, date)
 VALUES ('San Francisco', 43, 57, 0.0, '1994-11-29')
 ```
-### 查询表
+#### 查询表
 ```sql
 # 查询所有列
 SELECT * FROM weather;
@@ -72,7 +72,7 @@ SELECT city, (temp_hi+temp_lo)/2 AS temp_avg, date FROM weather;
 # 结果排序，以city列正向排序：
 SELECT * FROM weather ORDER BY city;
 ```
-### 多表连接查询
+#### 多表连接查询
 ```sql
 # 从weather和cities两个表中，查询city是name的行。
 SELECT *

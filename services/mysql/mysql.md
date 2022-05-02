@@ -1,5 +1,5 @@
-# mysql命令
-## 用法
+## mysql命令
+### 用法
 ```
 mysql [OPTIONS] [database]
 ```
@@ -12,7 +12,7 @@ mysql [OPTIONS] [database]
 | -h, --host=name       | 主机                                                  |
 | -e, --execute=name    | 执行命令然后退出（非交互式）                          |
 
-## 示例
+### 示例
 
 ~~~shell
 # 非交互式显示所有数据库
@@ -22,13 +22,13 @@ mysql -e 'show databases;'
 mysql < all_db.sql
 ~~~
 
-# 基础常用SQL语句示例
+## 基础常用SQL语句示例
 ~~~mysql
 # 从user这个表中，删除age字段
 alter table user DROP COLUMN age;
 ~~~
 
-# 其他常用SQL语句示例
+## 其他常用SQL语句示例
 
 ### 查看每个数据库所占磁盘大小
 
