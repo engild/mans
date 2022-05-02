@@ -7,6 +7,6 @@
     'process': '进程',
     'device-resources': '设备、资源',
     'text_processing': '文本输入输出处理',
-    'unclassified': '未分类的',
+    '~unclassified': '未分类的',
     'user': '用户',
 }

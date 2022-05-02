@@ -40,7 +40,7 @@ def gen(path):
             cmd_link_name = cmd_file[:cmd_file.rfind('.')]
             cmd_link = "- [%s](%s/blob/%s/%s/%s/%s)\n" %(cmd_link_name, repo_url, branch_name, path, dir, cmd_file)
             contents_file.write(cmd_link)
-    
+
     contents_file.close()
 
 

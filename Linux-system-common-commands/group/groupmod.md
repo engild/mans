@@ -1,8 +1,8 @@
-# groupmod命令&
+## groupmod命令&
 
 用于修改组
 
-## 用法
+### 用法
 ```
 groupmod [options] GROUP
 ```
@@ -13,7 +13,7 @@ groupmod [options] GROUP
 | -n, --new-name \<NEW_GROUP> | 修改组名为NEW_GROUP |
 | -o, --non-unique           | 允许使用重复的 GID  |
 
-## 示例
+### 示例
 
 ```shell
 # 将组ID为500的修改成组ID为1500

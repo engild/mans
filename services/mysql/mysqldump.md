@@ -1,10 +1,10 @@
-# mysqldump命令
+## mysqldump命令
 
 转储MySQL数据库和表的结构和内容。
 
 默认选项按照给定的顺序从以下文件中读取:`/etc/my.cnf` ---> `/etc/mysql/my.cnf` --->  `~/.my.cnf`
 
-## 用法
+### 用法
 ```
 mysqldump [OPTIONS] database [tables]
 mysqldump [OPTIONS] --databases [OPTIONS] DB1 [DB2 DB3...]
@@ -20,7 +20,7 @@ mysqldump [OPTIONS] --all-databases [OPTIONS]
 | -B, --databases       | 指定数据库                                            |
 |                       |                                                       |
 
-## 示例
+### 示例
 
 ~~~shell
 # 转储所有数据库

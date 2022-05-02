@@ -1,6 +1,6 @@
-# apt-cache
+## apt-cache命令
 
-## 示例
+### 示例
 
 ```shell
 # 查看包由哪个源提供
