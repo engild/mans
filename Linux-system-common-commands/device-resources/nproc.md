@@ -1,10 +1,10 @@
-## nproc命令
+## nproc命令&
 
 打印当前进程可用的处理器数
 
 ### 用法
 ```
-nproc [选项]...
+nproc [OPTIONS]...
 ```
 
 | 选项       | 说明                        |
@@ -14,12 +14,10 @@ nproc [选项]...
 
 ### 示例
 
-~~~shell
+```shell
 # 查看cpu核心数
-nproc --all
-
-nproc --ignore=2
+nproc
 
 # 忽略两核cpu
 nproc --all --ignore=2
-~~~
+```

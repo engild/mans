@@ -15,10 +15,10 @@ compgen [-abcdefgjksuv] [-o option]  [-A action] [-G globpat] [-W wordlist]  [-F
 | -v   | 显示系统中所有变量名             |
 
 ### 示例
-~~~shell
+```shell
 # 显示所有用户
 compgen -u
 
 # 显示所有组
 compgen -g
-~~~
+```
