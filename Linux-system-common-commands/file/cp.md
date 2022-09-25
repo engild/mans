@@ -17,5 +17,5 @@ cp [OPTION]... -t DIRECTORY SOURCE...
 
 ```shell
 # 强制创建软链接
-cp -lf /usr/bin/python3 /usr/bin/python
+cp -sf /usr/bin/python3 /usr/bin/python
 ```
