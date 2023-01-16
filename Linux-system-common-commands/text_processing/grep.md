@@ -37,6 +37,10 @@ grep '^#.*;$'
 # 匹配空行
 grep ^$
 
-# 可以匹配'word'但不能匹配'words'
-grep -w word
+# 精确匹配单词。grep是以非下划线进行分词。
+echo word | grep -w word   # 成功
+echo words | grep -w word   # 失败
+echo "hello-world" | grep -w hello   # 成功
+echo "hello_world" | grep -w hello   # 失败
+
 ```

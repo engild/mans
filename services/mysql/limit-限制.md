@@ -1,0 +1,1 @@
+UPDATE table_name SET field_name = new_value WHERE id = 1;

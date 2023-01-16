@@ -32,4 +32,7 @@ tail -n+10 file
 
 # 显示文件最后20行，并且动态查看后续内容，此时n不能省略。
 tail -n20 -f file
+
+# 结合dd命令，查看一个或多个文件的增长速度
+tail -f file01 file02 | dd of=/dev/null status=progress
 ```
