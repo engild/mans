@@ -24,7 +24,7 @@ nc [-46CDdFhklNnrStUuvZz] [-I length] [-i interval] [-M ttl]
 nc -zv 192.168.10.20 3306
 
 # 测试到baidu.com的8080端口连通性，并设置超时时间为5秒
-nc -vz -w5  baidu.com 8080
+nc -zv -w5  baidu.com 8080
 
 # 在特定端口上启动nc监听连接
 nc -l 1280
@@ -39,7 +39,7 @@ nc 172.16.160.20 8001 < nc.in 		# 发送方执行
 # 传输目录
 nc -l 8001 | tar xfvz -                                                      ----接收者执行
 
-tar cfz - * | nc 172.16.160.20 8001  
+tar cfz - * | nc 172.16.160.20 8001
 
 # 扫描tcp协议80到90端口,并设置超时时间为2秒
 nc -zv -w2 192.168.10.20 80-90

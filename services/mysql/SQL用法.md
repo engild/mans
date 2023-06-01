@@ -137,3 +137,7 @@ select * from 表名 where YEARWEEK(DATE_FORMAT(时间字段,‘%Y-%m-%d’))=YE
 select *from 表名
 
 where PERIOD_DIFF(DATE_FORMAT(NOW(),‘%Y%m’),DATE_FORMAT(时间字段,‘%Y%m’)
+
+SELECT a.*, b.* FROM table_a a JOIN table_b b ON a.id = b.id;
+
+select a.host,b.asset_name,c.name,a.create_time from siem_asset_addr_info a join siem_asset_info b join siem_asset_system_type_info c  where a.id=b.id AND b.system_type = c.id AND DATE_SUB(CURDATE(),INTERVAL 30 DAY)<= DATE(a.create_time);
