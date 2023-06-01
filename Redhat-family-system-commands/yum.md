@@ -25,6 +25,7 @@ makecache	生成元数据缓存
 ```shell
 # 下载packages到/root，不会真正的安装
 yum install --downloadonly --downloaddir=/root packages
+yum reinstall --downloadonly --downloaddir=/root packages
 
 # 清除所有缓存
 yum clean all

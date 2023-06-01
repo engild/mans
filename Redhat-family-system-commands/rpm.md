@@ -71,3 +71,11 @@ rpm {-e|--erase} [--allmatches] [--justdb] [--nodeps] [--noscripts] [--notrigger
         [--replacefiles] [--replacepkgs]
         [--test]
 ```
+
+### 示例
+```sh
+# 强制安装rpm包。安装报错提示NOKEY可以用此方法
+rpm --force -i packges
+
+
+```
