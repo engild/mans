@@ -9,3 +9,14 @@ cat [OPTION]... [FILE]...
 
 
 -n  # 输出时显示行号。
+
+
+```sh
+# 直接将文本写到文件中
+cat >> /tmp/yourfile << EOF
+Your content
+EOF
+
+#
+
+```
