@@ -40,7 +40,7 @@ FNR  各文件分别计数的行号
 
 ###  示例
 
-~~~shell
+```sh
 # 以空格分隔，打印第2列
 awk '{print $2}'
 
@@ -68,4 +68,4 @@ awk '{system("echo "$1" "$2"; echo "$3" "$4)}'
 export SRC_REPO=registry.cn-beijing.aliyuncs.com/yunionio/
 export DEST_REPO=10.127.190.216:5000/yunionio/
 docker images | grep "$SRC_REPO" | tr / ' ' | awk '{system("echo docker tag "$5" ${DEST_REPO}"$3":"$4" ;echo docker push ${DEST_REPO}"$3":"$4)}'
-~~~
+```

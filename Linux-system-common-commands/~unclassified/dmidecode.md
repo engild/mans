@@ -60,10 +60,7 @@ xxx [选项]
 
 ### 示例
 ```sh
-# 示例的注释
-命令示例
-
-...
-
+# 查看机器SN
+dmidecode -s system-serial-number
 
 ```
