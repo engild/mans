@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+ifconfig命令
+=======
 ```sh
 # 临时给eth0网卡配置IP为192.168.10.25，且netmask为255.255.255.0
 ifconfig eth0 192.168.10.25 netmask 255.255.255.0
@@ -8,3 +11,4 @@ ifconfig xgbe0 mtu 2000
 
 
 ```
+>>>>>>> 80b7ed2cb879d777968c79c8463c97e997905aa7

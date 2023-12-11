@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+route命令
+
+# 查看默认路由
+route get 0.0.0.0
+
+
+# 查看到172.16.10.20的路由
+route get 172.16.10.20
+=======
 ## route命令
 
 
@@ -31,3 +41,4 @@ route add default gw 192.168.2.1
 route del default gw 192.168.2.1 ???
 
 ```
+>>>>>>> 80b7ed2cb879d777968c79c8463c97e997905aa7
