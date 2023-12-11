@@ -14,6 +14,9 @@ xxx [选项]
 
 ### 示例
 ```sh
+# 
+chassis status
+
 # 查看电源状态
 chassis power status
 
@@ -25,7 +28,8 @@ chassis bootdev pxe
 
 # 重启后进入bios
 chassis bootdev bios
-
-# 强制修改启动项，让机器重启后自动进入BIOS设置界面
 chassis bootparam set bootflag force_bios
+
+# 设置永久disk引导
+chassis bootdev disk options=persistent
 ```

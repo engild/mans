@@ -13,6 +13,13 @@
 
 ### 示例
 
-~~~shell
+```sh
 journalctl -xe -u network
-~~~
+
+
+journalctl -f -n 10000 -u network
+
+
+
+```
+

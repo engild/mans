@@ -18,6 +18,9 @@ sed [选项]... {脚本(如果没有其他脚本)} [输入文件]...
 # 打印第5行
 sed -n '5p' testfile
 
+# 打印第10行到第20行
+sed -n '10,20p' testfile
+
 # 替换每行中第一个匹配项
 sed 's/a/b/' testfile
 

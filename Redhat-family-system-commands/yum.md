@@ -22,7 +22,7 @@ makecache	生成元数据缓存
 	
 	
 ### 示例
-```shell
+```sh
 # 下载packages到/root，不会真正的安装
 yum install --downloadonly --downloaddir=/root packages
 yum reinstall --downloadonly --downloaddir=/root packages
@@ -32,4 +32,8 @@ yum clean all
 
 # 显示配置的软件存储库
 yum repolist
+
+# 查看已安装的包
+yum list installed
+
 ```
