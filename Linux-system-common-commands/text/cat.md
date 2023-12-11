@@ -17,6 +17,11 @@ cat >> /tmp/yourfile << EOF
 Your content
 EOF
 
+# 直接将文本写到文件中无权限时：
+sudo bash -c "cat > /etc/hosts" << EOF
+Your content
+EOF
+
 #
 
 ```
