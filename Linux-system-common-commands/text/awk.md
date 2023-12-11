@@ -38,18 +38,32 @@ FNR  各文件分别计数的行号
 
 2)
 
-###  示例
 
-~~~shell
-# 以空格分隔，打印第2列
+###  分隔符示例
+```sh
+# 默认以空格分隔，打印第2列
 awk '{print $2}'
 
-# 指定分隔符
+# 指定冒号为分隔符
 awk -F: '{print $2}'
 
-# 指定多个分隔符
+# 同时指定多个分隔符
 awk -F"[:/]" '{print $2}'
 
+# 以单词做分隔符
+awk -v FS='time' '{print $2}'
+```
+
+
+### 示例（运算）
+```sh
+# 过滤某一列的数字大于10的行
+awk -F ':'  '$2>100{print $0}'
+```
+
+
+### 其他示例
+```sh
 # 打印最后一列
 awk '{print $NF}'
 
@@ -68,4 +82,4 @@ awk '{system("echo "$1" "$2"; echo "$3" "$4)}'
 export SRC_REPO=registry.cn-beijing.aliyuncs.com/yunionio/
 export DEST_REPO=10.127.190.216:5000/yunionio/
 docker images | grep "$SRC_REPO" | tr / ' ' | awk '{system("echo docker tag "$5" ${DEST_REPO}"$3":"$4" ;echo docker push ${DEST_REPO}"$3":"$4)}'
-~~~
+```

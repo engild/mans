@@ -1,59 +1,16 @@
 # docker命令
 
+# 通过overlay目录查所属容器
+docker ps -q | xargs docker inspect --format '{{.State.Pid}}, {{.Id}}, {{.Name}}, {{.GraphDriver.Data.WorkDir}}' | grep
+
 ## docker attach命令
 
 attach和exec功能类似，不同的是attach 直接进入容器启动命令的终端，不会启动新的进程，exec 则是在容器中打开新的终端，并且可以启动新的进程。
 ---
-## docker build命令
 
-构建镜像
-
-### 用法
-```
-docker build [OPTIONS] PATH | URL | -
-```
-| 选项 | 说明 |
-| --- | --- |
-| -t          | 指定镜像名，格式为name:tag，tag缺省为latest                  |
-| --build-arg | 设置构建时的变量。--build-arg https_proxy=http://XXX:port，多个变量写多个--build-arg |
-| --add-host  | 添加一个自定义主机到ip的映射(host:ip)                        |
-| -q          | 安静模式，关闭构建输出，仅在成功后打印镜像ID                 |
-| -c          | cpu权重                                                      |
-| -m          | 限制内存                                                     |
-
-### 示例
-```shell
-# 通过当时目录下名为 dockerfile 的文件构建一个镜像，名为nginx
-# .表示在当前目录下搜索dockerfile文件。
-docker build -t nginx .
-```
----
 ## docker commit命令
 ---
-## docker cp命令&
 
-在容器和本地文件系统之间复制文件
-
-### 用法
-```shell
-# 从容器往本地复制
-docker cp [Options] CONTAINER:SRC_PATH DEST_PATH|-
-
-# 从本地往容器复制
-docker cp [Options] SRC_PATH|- CONTAINER:DEST_PATH
-```
-
-| 选项 | 说明 |
-| --- | --- |
-| -a | 存档模式（复制所有uid / gid信息） |
-| -L | 始终遵循SRC_PATH中的符号链接|
-
-### 示例
-```shell
-# 将容器nginx中的/etc/hosts文件复制到当前目录
-docker cp nginx:/etc/hosts ./
-```
----
 ## docker create命令
 
 创建一个新容器
@@ -117,75 +74,9 @@ docker exec nginx echo $PATH
 docker exec -it centos bash
 ```
 ---
-## docker export命令&
 
-将容器的文件系统导出为`tar`归档文件。
-
-该方式保存的是容器，所以对容器相应的修改也会保存下来。
-
-注：此方式导出的镜像归档文件，需用`docker import`导入，不能用`docker load`
-
-### 用法
-```
-docker export [Options] CONTAINER
-```
-
-| 选项 | 说明 |
-| --- | --- |
-| -o | 指定镜像导出的位置 |
-
-### 示例
-```shell
-# 将名为nginx容器导出，保存到当前目录下为nginx.tar
-docker export nginx -o nginx.tar
-```
----
-## docker images命令&
-
-列出镜像
-
-### 用法
-```
-docker images [Options] [REPOSITORY[:TAG]]
-```
-
-| 选项 | 说明 |
-| --- | --- |
-| -a | 显示所有镜像(默认隐藏中间镜像) |
-| -q | 只显示镜像的ID。 |
-| --no-trunc | 不截断输出。可以显示镜像完整ID。 |
-
-### 示例
-```shell
-# 查看本地镜像
-docker images
-
-# 查看镜像，只显示镜像ID
-docker images -q
-```
----
 ## docker import命令
----
-## docker inspect命令&
 
-返回docker对象的详细信息
-
-docker对象包括`containers`,`images`,`volume`,`network`等信息
-
-### 用法
-```
-docker inspect [Options] NAME|ID [NAME|ID...]
-```
-
-### 示例
-```shell
-# 查看容器信息
-docker inspect CONTAINERS
-
-# 查看镜像的信息
-docker inspect IMAGES
-```
----
 ## docker load命令&
 
 从`tar`存档或`STDIN`加载镜像。
@@ -217,35 +108,7 @@ docker load -qi /root/test.tar
 docker pause CONTAINER [CONTAINER...]
 ```
 ---
-## docker ps命令&
 
-列出容器
-
-### 用法
-```
-docker ps [Options]
-```
-
-| 选项 | 说明 |
-| --- | --- |
-| -a | 显示所有状态的容器（默认仅显示状态为running的） |
-| -n | 显示最后创建的N个容器（包括所有状态） |
-| -l | 显示最新创建的1容器（包括所有状态） |
-| --no-trunc | 不截断容器ID  |
-| -q | 只显示容器ID |
-| -s | Display total file sizes |
-
-### 示例
-```shell
-# 显示状态为running的容器
-docker ps
-
-# 显示最后创建的10个容器，包括所有状态的
-docker ps -n10
-
-# 显示所有状态的容器的ID
-docker ps -aq
-```
 ---
 ## docker pull命令&
 
@@ -465,3 +328,4 @@ docker update [Options] CONTAINER [CONTAINER...]
 | --restart | 重启策略 |
 
 ### 示例
+
