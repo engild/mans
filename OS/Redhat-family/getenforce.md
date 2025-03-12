@@ -1,0 +1,1 @@
+getenforce命令

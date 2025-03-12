@@ -1,0 +1,1 @@
+modinfo命令

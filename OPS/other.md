@@ -15,11 +15,10 @@ echo 'hello "'${var_name}'"'
 name=${name:-"default value"}
 name=${name:="default value"}
 
-## shell位置参数
-$1 $2 ${12} $* $@ $#
+
 
 ## 单引号中调用变量
-for i in `cat uuid_list`; do echo -n "$i "; curl -s 10.210.137.18:9966/InstanceService/instance_get_by_uuid -d '{"is_admin": true, "read_deleted": true, "uuid": "'${i}'"}' | python3 -m json.tool | grep -A1 open_ipv6 | tail -1 ; done
+for i in `cat host`; do curl -s IP/InstanceService -d '{"value1": true, "read_deleted": true, "host": "'${i}'"}' ; done
 
 
 ##  创建多个文件

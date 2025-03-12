@@ -1,0 +1,1 @@
+DELETE FROM table_name WHERE field_name = "value" limit 1;

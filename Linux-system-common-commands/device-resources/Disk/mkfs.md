@@ -1,1 +1,0 @@
-mkfs.ext4 -T largefile /dev/vdb1
