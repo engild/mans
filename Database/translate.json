@@ -1,0 +1,5 @@
+{
+    "mysql": "mysql关系型数据库",
+    "postgres": "Postgres关系型数据库",
+    "redis": "内存数据库"
+}

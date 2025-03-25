@@ -1,0 +1,7 @@
+### [javascript](https://github.com/engild/mans/tree/master/Language/javascript)
+- [pnpm](https://github.com/engild/mans/tree/master/Language/javascript/pnpm)
+### [python3](https://github.com/engild/mans/tree/master/Language/python3)
+- [method —— ](https://github.com/engild/mans/tree/master/Language/python3/method)
+- [module —— ](https://github.com/engild/mans/tree/master/Language/python3/module)
+- [pip —— ](https://github.com/engild/mans/tree/master/Language/python3/pip)
+### [shell](https://github.com/engild/mans/tree/master/Language/shell)

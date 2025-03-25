@@ -1,0 +1,8 @@
+{
+    "Linux-common": "Linux系统通用命令",
+    "Redhat-family": "Redhat系列系统命令",
+    "Debian-family": "Debian系列系统命令",
+    "Alpine": "Alpine系统命令",
+    "MacOS": "苹果系统命令",
+    "Windows": "Windows系统命令"
+}

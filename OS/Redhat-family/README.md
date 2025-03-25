@@ -1,5 +1,0 @@
-- [dnf](https://github.com/engild/mans/blob/master/Redhat-family-system-commands/dnf.md)
-- [getenforce](https://github.com/engild/mans/blob/master/Redhat-family-system-commands/getenforce.md)
-- [rpm --- rpm包管理器](https://github.com/engild/mans/blob/master/Redhat-family-system-commands/rpm.md)
-- [setenforce](https://github.com/engild/mans/blob/master/Redhat-family-system-commands/setenforce.md)
-- [yum](https://github.com/engild/mans/blob/master/Redhat-family-system-commands/yum.md)

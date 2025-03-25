@@ -1,8 +1,18 @@
-pip3命令
+## pip3命令
 
 ```sh
+# 使用指定的源
+# 清华大学源
+pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple/ some-package
+# 阿里云源
+pip3 install -i https://mirrors.aliyun.com/pypi/simple/ some-package
+
+# 永久修改源
+pip3 config set global.index-url https://mirrors.aliyun.com/pypi/simple/
+
+
 # 安装指定版本的包
-pip install package_name==version
+pip3 install package_name==version
 
 # 通过本地归档文件安装一个包和它的依赖
 pip3 install ./downloads/packge-1.0.1.tar.gz ./downloads/depend.tar.gz

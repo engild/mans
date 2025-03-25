@@ -1,0 +1,1 @@
+virsh vcpuinfo命令
