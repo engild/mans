@@ -1,12 +1,21 @@
-# 等等！点个Star再走...
+### [操作系统相关命令](https://github.com/engild/mans/tree/master/OS)
 
-## [Linux系统通用命令](https://github.com/engild/mans/tree/master/Linux-system-common-commands)
+### [服务相关命令](https://github.com/engild/mans/tree/master/services)
 
-## [Debian系列系统命令](https://github.com/engild/mans/tree/master/Debian-family-system-commands)
+### [开发语言相关命令](https://github.com/engild/mans/tree/master/Language)
 
-## [Redhat系列系统命令](https://github.com/engild/mans/tree/master/Redhat-family-system-commands)
+### [工具型相关命令](https://github.com/engild/mans/tree/master/Tools)
 
-## [服务](https://github.com/engild/mans/tree/master/services)
+### [数据库相关命令](https://github.com/engild/mans/tree/master/Database)
+
+### [运维操作相关](https://github.com/engild/mans/tree/master/OPS)
+
+### [其他命令](https://github.com/engild/mans/tree/master/Other)
 
 
-## 贡献
+
+
+
+# 代码提交
+
+提交代码前运行 `python3 rebuild-contents.py` 以重新生成目录

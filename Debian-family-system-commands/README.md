@@ -1,5 +1,0 @@
-- [apt-cache](https://github.com/engild/mans/blob/master/Debian-family-system-commands/apt-cache.md)
-- [apt-get](https://github.com/engild/mans/blob/master/Debian-family-system-commands/apt-get.md)
-- [apt](https://github.com/engild/mans/blob/master/Debian-family-system-commands/apt.md)
-- [dpkg](https://github.com/engild/mans/blob/master/Debian-family-system-commands/dpkg.md)
-- [netplan](https://github.com/engild/mans/blob/master/Debian-family-system-commands/netplan.md)

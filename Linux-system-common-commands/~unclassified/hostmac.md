@@ -1,1 +1,0 @@
-hostmac show 0

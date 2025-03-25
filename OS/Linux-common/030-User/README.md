@@ -1,0 +1,4 @@
+- [usermod —— 修改用户账户](https://github.com/engild/mans/blob/master/OS/Linux-common/030-User/usermod.md)
+- [useradd —— 用于创建新用户，或更新创建新用户时的默认信息](https://github.com/engild/mans/blob/master/OS/Linux-common/030-User/useradd.md)
+- [user —— 打印登录到当前主机的用户名](https://github.com/engild/mans/blob/master/OS/Linux-common/030-User/users.md)
+- [userdel —— 删除用户](https://github.com/engild/mans/blob/master/OS/Linux-common/030-User/userdel.md)
