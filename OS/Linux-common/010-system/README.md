@@ -1,0 +1,1 @@
+- [hostnamectl —— 查询或修改系统主机名。](https://github.com/engild/mans/blob/master/OS/Linux-common/010-system/hostnamectl.md)
