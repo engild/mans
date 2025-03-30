@@ -1,0 +1,4 @@
+- [kubectl rollout —— 管理一个资源的滚动](https://github.com/engild/mans/blob/master/Services/kubernetes/kubectl/rollout.md)
+- [kubectl logs —— 打印pod或指定资源中的容器的日志](https://github.com/engild/mans/blob/master/Services/kubernetes/kubectl/logs.md)
+- [kubectl get —— 显示一个或多个资源](https://github.com/engild/mans/blob/master/Services/kubernetes/kubectl/get.md)
+- [kubectl describe —— 显示特定资源或资源组的详细信息](https://github.com/engild/mans/blob/master/Services/kubernetes/kubectl/describe.md)

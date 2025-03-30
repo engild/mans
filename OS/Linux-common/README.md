@@ -1,5 +1,7 @@
 ### [001-unclassified](https://github.com/engild/mans/tree/master/OS/Linux-common/001-unclassified)
+- [uptime —— 查询系统运行时间、登录用户数、负载情况](https://github.com/engild/mans/blob/master/OS/Linux-common/001-unclassified/uptime.md)
 ### [010-system](https://github.com/engild/mans/tree/master/OS/Linux-common/010-system)
+- [hostnamectl —— 查询或修改系统主机名。](https://github.com/engild/mans/blob/master/OS/Linux-common/010-system/hostnamectl.md)
 ### [015-network](https://github.com/engild/mans/tree/master/OS/Linux-common/015-network)
 ### [015-text](https://github.com/engild/mans/tree/master/OS/Linux-common/015-text)
 ### [020-file](https://github.com/engild/mans/tree/master/OS/Linux-common/020-file)

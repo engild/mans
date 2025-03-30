@@ -83,13 +83,13 @@ def get_all(path):   # done
 
     return path, sorted(directories), files
 
-def write_readme(content, file):
+def write_readme(content, file):   # done
     if content:
         with open(file, "w") as f:
             for item in content:
                 f.write(f"{item}\n")
 
-def process_c(root, dir):
+def process_c(root, dir):   # done
     readme_file = root + "/" + dir + "/README.md"
     readme_content = []
     
@@ -159,7 +159,6 @@ def process_c(root, dir):
 def main():
     script_root, script_dir, script_file = get_all(script_directory)
     for dir in script_dir:
-        # script_root, dir = "/Users/yudeyu/yf/mans/OS", "Linux-common"
         process_c(script_root, dir)
 
 if __name__ == '__main__':

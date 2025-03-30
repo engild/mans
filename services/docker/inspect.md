@@ -1,6 +1,5 @@
 ## docker inspect命令&
-
-返回docker对象的详细信息
+说明：返回docker对象的详细信息
 
 docker对象包括`containers`,`images`,`volume`,`network`等信息
 

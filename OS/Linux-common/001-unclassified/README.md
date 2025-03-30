@@ -1,0 +1,1 @@
+- [uptime —— 查询系统运行时间、登录用户数、负载情况](https://github.com/engild/mans/blob/master/OS/Linux-common/001-unclassified/uptime.md)

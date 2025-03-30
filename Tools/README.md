@@ -2,3 +2,4 @@
 ### [ansible —— 自动化运维工具](https://github.com/engild/mans/tree/master/Tools/ansible)
 ### [git —— 分布式版本控制系统](https://github.com/engild/mans/tree/master/Tools/git)
 ### [helm —— Kubernetes包管理器](https://github.com/engild/mans/tree/master/Tools/helm)
+- [helm](https://github.com/engild/mans/tree/master/Tools/helm/helm)
