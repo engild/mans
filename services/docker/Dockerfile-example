@@ -1,0 +1,45 @@
+# Ref: https://docs.docker.com/engine/reference/builder/
+# Ref: https://docs.docker.com/language/golang/build-images/
+
+# 万物开始，指定基础镜像
+FROM ubuntu
+
+
+
+# [COPY] 复制本地文件或目录到镜像中
+COPY file1.txt file2.txt /usr/src/things/
+
+
+
+# [ADD] 添加本地或远程文件或目录到镜像中，如果是tar包，会自动解压
+ADD file1.txt file2.txt /your/dest/
+
+# 从远程下载文件并添加到镜像中
+ADD https://example.com/archive.zip /usr/src/things/
+ADD git@github.com:user/repo.git /usr/src/things/
+
+
+
+# [ENV] 定义环境变量，这些环境变量在容器运行时可用
+ENV key=value
+
+
+
+# [ARG] 定义构建参数，这些参数在构建镜像时可用，但是在容器运行时不可用
+ARG name=defaultValue
+ARG name
+
+
+
+SHELL [ "executable" ]
+HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD [ "executable" ]
+LABEL key="value"
+VOLUME [ "/data" ]
+STOPSIGNAL SIGKILL
+ONBUILD COPY source dest
+EXPOSE 80
+USER daemon
+WORKDIR /the/workdir/path
+RUN command
+ENTRYPOINT [ "executable" ]
+CMD [ "executable" ]

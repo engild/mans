@@ -1,0 +1,19 @@
+## debug模块
+
+- hosts: testhost
+  gather_facts: yes
+  # connection: local
+  tasks:
+    - name: debug模块基础用法
+      debug: 
+        msg: "debug ok"
+
+    # - name: debug调用变量
+    #   debug: 
+    #     msg:
+    #       - "os is {{ ansible_os_family }} family"
+    #       - "hostname is {{ inventory_hostname }}"
+
+    # - name: 打印主机的所有变量
+    #   ansible.builtin.debug:
+    #     var: hostvars[inventory_hostname]

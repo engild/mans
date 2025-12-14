@@ -1,0 +1,14 @@
+# 注册变量（register）的用法
+- hosts: testhost
+  gather_facts: yes
+  tasks:
+    
+    - name: 将执行结果保存到 result 变量
+      shell:
+        cmd: "echo ok"
+      register: result
+    
+    - name: 打印 result 的内容
+      debug:
+        var: result
+

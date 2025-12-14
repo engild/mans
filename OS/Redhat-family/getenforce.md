@@ -1,1 +1,1 @@
-getenforce命令
+## getenforce命令

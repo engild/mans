@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web    # Pod名称
+  namespace:   # 命名空间，默认是default命名空间
+spec:
+  containers:   # 容器列表
+  - name: nginx   # pod中的容器名称
+    image: nginx:1.20.2   # 容器镜像和版本
+    # image: anolis-registry.cn-zhangjiakou.cr.aliyuncs.com/openanolis/nginx:1.14.1-8.6   # 容器镜像和版本
+    imagePullPolicy: Always   # 镜像拉取策略，Always表示每次启动容器时都会拉取最新的镜像,IfNotPresent(默认)表示如果本地不存在镜像则拉取，Never表示不会拉取镜像
+    ports:   # 容器端口映射
+    - containerPort: 80   # 容器端口
+      name: http   # 端口名称
+      protocol: TCP   # 协议，TCP或UDP
+    resources:   # 服务器资源管理
+      requests:   # 最小请求资源
+        cpu: "100m"
+        memory: "100Mi"
+      limits:   # 最大使用资源
+        cpu: "200m"
+        memory: "200Mi"
+    command: []
+    args: []
+  - name: apache   # 第二个容器
+    image: httpd
+    ports:
+    - containerPort: 8080
+      name: http2
+      protocol: TCP
+    resources:
+      requests:
+        cpu: "100m"
+        memory: "100Mi"
+      limits:
+        cpu: "200m"
+        memory: "200Mi"
+    command: []
+    args: []
+
+  restartPolicy: Always   # 重启策略，Always表示每次启动容器时都会重启
+  # dnsPolicy: ClusterFirst   # DNS策略，ClusterFirst表示使用集群中的DNS服务
+  # securityContext:   # 安全上下文
+  #   runAsUser: 1000   # 运行用户ID
+  #   runAsGroup: 1000   # 运行用户组ID

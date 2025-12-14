@@ -1,10 +1,5 @@
-# apt命令
-### apt使用代理
-
-编辑/etc/apt/apt.conf.d/10proxy
-~~~
-Acquire::http::Proxy "http://192.168.68.116:1080";
-~~~
+## apt命令
+说明：Debian-family Linux系统的软件包管理工具
 
 ### 示例
 
@@ -22,7 +17,7 @@ apt install ncat iftop
 apt reinstall nginx
 
 # 升级指定的包
-apt-get install --only-upgrade policykit-1
+apt install --only-upgrade policykit-1
 
 # 移除包
 apt remove mysql
@@ -32,4 +27,30 @@ apt autoremove
 
 # 查一个命令应该装哪个包
 apt search proxychains
+```
+
+
+
+
+### apt使用代理
+```sh
+# 编辑apt代理配置文件
+vi /etc/apt/apt.conf.d/10proxy
+
+Acquire::http::Proxy "http://192.168.68.116:1080";
+```
+
+### 配置apt源
+```sh
+# 配置阿里源，debian 11.x (bullseye)
+cat >> /etc/apt/sources.list << EOF
+deb https://mirrors.aliyun.com/debian/ bullseye main non-free contrib
+deb-src https://mirrors.aliyun.com/debian/ bullseye main non-free contrib
+deb https://mirrors.aliyun.com/debian-security/ bullseye-security main
+deb-src https://mirrors.aliyun.com/debian-security/ bullseye-security main
+deb https://mirrors.aliyun.com/debian/ bullseye-updates main non-free contrib
+deb-src https://mirrors.aliyun.com/debian/ bullseye-updates main non-free contrib
+deb https://mirrors.aliyun.com/debian/ bullseye-backports main non-free contrib
+deb-src https://mirrors.aliyun.com/debian/ bullseye-backports main non-free contrib
+EOF
 ```
