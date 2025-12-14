@@ -1,5 +1,5 @@
 ## rpm命令
---- rpm包管理器
+说明：rpm包管理器
 
 ### 用法
 ```
@@ -72,6 +72,20 @@ rpm {-e|--erase} [--allmatches] [--justdb] [--nodeps] [--noscripts] [--notrigger
         [--replacefiles] [--replacepkgs]
         [--test]
 ```
+| 选项 | 说明
+| ---- | ---
+| -a, --all         | 查询所有已安装的包
+| -f FILE           | 查询文件属于哪个包
+
+| 查询选项 | 说明
+| --- | ---
+| -i                | 显示包信息
+
+| 移除选项 | 说明
+| --- | ---
+| -e                | 不会真正删除，只是去尝试，配合-vv选项去调试。
+
+
 
 ### 示例
 ```sh

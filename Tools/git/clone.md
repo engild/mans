@@ -29,4 +29,7 @@ git clone https://github.com/engild/mans.git
 
 # 克隆指定分支
 git clone -b 分支名 仓库地址
+
+# 克隆ssh仓库，指定ssh密钥。id_rsa2是用户目录下的ssh私钥而不是公钥
+git clone git@github.com:xxx/yyy.git --config core.sshcommand="ssh -i ~/.ssh/id_rsa2"
 ```

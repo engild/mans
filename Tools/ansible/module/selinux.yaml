@@ -1,0 +1,9 @@
+## selinux模块
+
+- name: Manager SELinux of Redhat family OS
+  # 针对红帽系列的系统禁用SELinux
+  gather_facts: yes
+  selinux:
+    policy: targeted
+    state: disabled
+  when: ansible_os_family == "RedHat"
